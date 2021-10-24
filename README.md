@@ -15,12 +15,12 @@ ensure rdx_service
 ## Usage
 ```lua
 -- Enable service
-ESX.TriggerServerCallback('rdx_service:enableService', function(canTakeService, maxInService, inServiceCount)
+RDX.TriggerServerCallback('rdx_service:enableService', function(canTakeService, maxInService, inServiceCount)
 
   if canTakeService then
-    ESX.ShowNotification('You enabled service')
+    RDX.ShowNotification('You enabled service')
   else
-    ESX.ShowNotification('Service is full: ' .. inServiceCount .. '/' .. maxInService)
+    RDX.ShowNotification('Service is full: ' .. inServiceCount .. '/' .. maxInService)
   end
 
 end, 'taxi')
